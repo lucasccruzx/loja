@@ -47,11 +47,12 @@
   const products = [
     {
       id: '1',
-      title: 'Smartphone Samsung Galaxy S22',
-      description: 'Celular com câmera de alta resolução e bateria duradoura.',
+      title: 'Smartphone Samsung Galaxy A54 5G',
+      description: 'Celular com câmera de alta resolução e bateria duradoura, ótimo para quem gosta de jogar.',
       price: 'R$ 3.200,00',
       category: 'electronics',
-      imageUrl: 'a54.png'
+      imageUrl: 'https://images.tcdn.com.br/img/img_prod/1233679/celular_galaxy_a54_5g_128gb_preto_zf_samsung_4965_1_4562121d8b061b0bae0681f0886c1cd9.jpg',
+      link: 'a54.html'
     },
     {
       id: '2',
@@ -59,7 +60,8 @@
       description: 'Carro esportivo de tração dianteira com design aerodinâmico, tecnologia avançada e segurança de alto nível.',
       price: 'R$ 490.000,00',
       category: 'cars',
-      imageUrl: 'https://i.pinimg.com/736x/a1/4d/6a/a14d6a53fcc0840f1430e8eb732ad2d6.jpg'
+      imageUrl: 'https://i.pinimg.com/736x/a1/4d/6a/a14d6a53fcc0840f1430e8eb732ad2d6.jpg',
+      link: 'civic.html'
     },
     {
       id: '3',
@@ -67,7 +69,8 @@
       description: 'Sofá confortável com design moderno e cor preta.',
       price: 'R$ 1.200,00',
       category: 'furniture',
-      imageUrl: 'https://images.tcdn.com.br/img/img_prod/655199/sofa_basic_3_lugares_couro_preto_2_00_m_7653_2_c077e3f3a2a5a3121007cd78798a273b.jpg'
+      imageUrl: 'https://images.tcdn.com.br/img/img_prod/655199/sofa_basic_3_lugares_couro_preto_2_00_m_7653_2_c077e3f3a2a5a3121007cd78798a273b.jpg',
+      link: 'product-details.html?id=3' // Link to product details page
     },
     {
       id: '4',
@@ -75,7 +78,8 @@
       description: 'Calçado esportivo para corrida com amortecimento avançado.',
       price: 'R$ 450,00',
       category: 'fashion',
-      imageUrl: 'https://imgcentauro-a.akamaihd.net/400x400/98840051A1.jpg'
+      imageUrl: 'https://imgcentauro-a.akamaihd.net/400x400/98840051A1.jpg',
+      link: 'product-details.html?id=4' // Link to product details page
     },
     {
       id: '5',
@@ -83,7 +87,8 @@
       description: 'Raquete leve e resistente para jogadores intermediários.',
       price: 'R$ 350,00',
       category: 'sports',
-      imageUrl: 'https://contents.mediadecathlon.com/p2468004/k$7180d77501b2cd6b4ed7d7e2194e277a/picture.jpg?format=auto&f=3000x0.png'
+      imageUrl: 'https://contents.mediadecathlon.com/p2468004/k$7180d77501b2cd6b4ed7d7e2194e277a/picture.jpg?format=auto&f=3000x0.png',
+      link: 'product-details.html?id=5' // Link to product details page
     },
     {
       id: '6',
@@ -91,7 +96,8 @@
       description: 'Notebook com processador i7, 16GB RAM, SSD 512GB.',
       price: 'R$ 4.500,00',
       category: 'electronics',
-      imageUrl: 'note.png'
+      imageUrl: 'note.png',
+      link: 'product-details.html?id=6' // Link to product details page
     }
   ];
 
@@ -106,7 +112,7 @@
       return;
     }
     productContainer.innerHTML = productList.map(product => /*html*/`
-      <article class="product-card" tabindex="0" role="article" aria-labelledby="product-title-${product.id}" aria-describedby="product-desc-${product.id}">
+      <a href="${product.link}" class="product-card" tabindex="0" role="article" aria-labelledby="product-title-${product.id}" aria-describedby="product-desc-${product.id}">
         <div class="product-image">
           <img
             src="${product.imageUrl}"
@@ -122,7 +128,7 @@
           <p class="product-description" id="product-desc-${product.id}">${product.description}</p>
           <div class="product-price" aria-label="Preço do produto">${product.price}</div>
         </div>
-      </article>
+      </a>
     `).join('');
   }
 
@@ -170,4 +176,3 @@
 </script>
 </body>
 </html>
-
