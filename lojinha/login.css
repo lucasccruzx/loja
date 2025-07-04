@@ -1,0 +1,120 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  html, body {
+    height: 100%;
+    background: #121212;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .logo img {
+  width: 100px; /* Ajuste o tamanho do logo conforme necessário */
+}
+  a {
+    text-decoration: none;
+    color: #8B0000;
+  }
+  /* Container */
+  .container {
+    height: 100vh;
+    max-height: 600px;
+    max-width: 350px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 30px;
+  }
+  /* Spotify Logo */
+  .logo {
+    display: block;
+    margin: 0 auto 30px auto;
+    width: 130px;
+    height: 38px;
+    background: url("logo.png") no-repeat center center;
+    background-size: contain;
+    filter: brightness(100%);
+  }
+  /* Form styles */
+  form {
+    background: #181818;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  }
+  .login-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    font-weight: 700;
+  }
+  label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+    color: #b3b3b3;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: none;
+    background: #333333;
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  input[type="text"]::placeholder,
+  input[type="password"]::placeholder {
+    color: #b3b3b3;
+  }
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    outline: none;
+    background-color: #282828;
+  }
+  button {
+    width: 100%;
+    background: #8B0000;
+    color: #fff;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 500px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 8px 20px #B22222;
+  }
+  button:hover {
+    background-color: #B22222;
+    box-shadow: #B22222;
+  }
+  .form-footer {
+    margin-top: 20px;
+    font-size: 0.875rem;
+    text-align: center;
+    color: #b3b3b3;
+  }
+  .form-footer a {
+    color: #8B0000;
+    font-weight: 700;
+  }
+  /* Responsive */
+  @media (max-width: 400px) {
+    .container {
+      padding: 30px 20px;
+      max-width: 100vw;
+    }
+  }
+  
+  
